@@ -1,16 +1,35 @@
-class DataManager:
-    def __init__(self, rooms_file, bookings_file) -> None:
-        self.rooms_file = rooms_file 
-        self.bookings_file = bookings_file
+import json
+from pathlib import Path
+from classes.room import Room
+from classes.booking import Booking
 
-    def load_rooms(self):
-        pass
 
-    def load_bookings(self):
-        pass
+class DataManager():
+    rooms_file = "rooms.json"
+    bookings_file = "bookings.json"
 
-    def save_rooms(self, rooms):
-        pass
+    @staticmethod
+    def load_rooms():
+        if not Path(DataManager.rooms_file).exists():
+            return []
+        with open(DataManager.rooms_file, "r") as file:
+            rooms_data = json.load(file)
+            return [Room.from_dict(room) for room in rooms_data]
+    
+    @staticmethod
+    def save_rooms(rooms):
+        with open(DataManager.rooms_file, "w") as file:
+            json.dump([room.to_dict() for room in rooms], file, indent=4)
 
-    def save_bookings(self, bookings):
-        pass
+    @staticmethod
+    def load_bookings():
+        if not Path(DataManager.bookings_file).exists():
+            return []
+        with open(DataManager.bookings_file, "r") as file:
+            bookings_data = json.load(file)
+            return [Booking.from_dict(booking) for booking in bookings_data]
+    
+    @staticmethod
+    def save_bookings(bookings):
+        with open(DataManager.bookings_file, "w") as file:
+            json.dump([booking.to_dict() for booking in bookings], file, indent=4)  

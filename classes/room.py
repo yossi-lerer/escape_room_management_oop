@@ -21,5 +21,6 @@ class Room:
     def to_dict(self):
         pass
 
-    def from_dict(self, data):
+    @classmethod
+    def from_dict(cls, data):
         pass
