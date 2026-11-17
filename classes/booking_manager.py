@@ -1,8 +1,10 @@
+from classes.data_manager import DataManager
+from classes.pricing_manager import PricingManager
+
 class BookingManager:
-    def __init__(self, rooms, bookings, pricing_manager) -> None:
-        self.rooms = rooms
-        self.bookings = bookings
-        self.pricing_manager = pricing_manager
+    rooms = DataManager().load_rooms()
+    bookings =  DataManager().load_bookings()
+    pricing_manager = PricingManager()
 
     def create_booking(self, customer_name, room_id, booking_date, start_time, players):
         pass

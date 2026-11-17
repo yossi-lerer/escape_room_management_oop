@@ -5,8 +5,8 @@ from classes.booking import Booking
 
 
 class DataManager():
-    rooms_file = "rooms.json"
-    bookings_file = "bookings.json"
+    rooms_file = "./db/rooms.json"
+    bookings_file = "./db/bookings.json"
 
     @staticmethod
     def load_rooms():

@@ -11,13 +11,15 @@ class Booking:
         self.cancellation_fee = cancellation_fee
 
     def cancel(self):
-        pass
+        self.status = "Cancelled"
 
     def update_details(self, booking_date, start_time, players, total_price):
         pass
-
+    
+    
     def to_dict(self):
-        pass
+        return  self.__dict__   
 
-    def from_dict(self):
-        pass
+    @classmethod
+    def from_dict(cls, data):
+        return cls(data["booking_id"], data["customer_name"], data["room_id"], data["booking_date"], data["start_time"], data["players"], data["total_price"], data["status"], data["cancellation_fee"])
