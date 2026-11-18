@@ -5,6 +5,11 @@ from classes.booking import Booking
 
 
 class DataManager():
+    def __new__(cls):
+        if not hasattr(cls, 'inst'):
+            cls.inst = super().__new__(cls)
+        return cls.inst
+    
     rooms_file = "./db/rooms.json"
     bookings_file = "./db/bookings.json"
 
@@ -19,7 +24,11 @@ class DataManager():
     @staticmethod
     def save_rooms(rooms):
         with open(DataManager.rooms_file, "w") as file:
-            json.dump([room.to_dict() for room in rooms], file, indent=4)
+            list_of_rooms = []
+            for room in rooms:
+                list_of_rooms.append(room.to_dict())
+            records = json.dumps(list_of_rooms, indent=4)
+            file.write(records)
 
     @staticmethod
     def load_bookings():
