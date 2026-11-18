@@ -9,14 +9,10 @@ class Room:
         self.price_per_player = price_per_player
         self.is_active = is_active
 
-    def activate(self):
-        pass
-
-    def deactivate(self):
-        pass
-
     def is_valid_players(self, players):
-        pass
+        if self.min_players <= players <= self.max_players:
+            return True
+        return False
 
     def to_dict(self):
         return self.__dict__

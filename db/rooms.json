@@ -97,7 +97,7 @@
         "min_players": 2,
         "max_players": 2,
         "price_per_player": 2,
-        "is_active": true
+        "is_active": false
     },
     {
         "room_id": "R011",
