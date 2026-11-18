@@ -32,35 +32,3 @@ class Display:
     5. Enable or disable a room.
     0. for main menu
     ''')
-        
-# class Room:
-#     def __init__(self, room_id, name, difficulty, duration, min_players, max_players, price_per_player, is_active=True):
-#         self.room_id = room_id
-#         self.is_active = is_active
-#         self.update_details(name, difficulty, duration, min_players, max_players,price_per_player)
-
-#     def update_details(self, name, difficulty, duration, min_players, max_players, price_per_player):
-#         name = name.strip()
-#         difficulty = difficulty.strip().capitalize()
-#         if not name:
-#             raise ValueError("Room name cannot be empty.")
-#         if difficulty not in ("Easy", "Medium", "Hard"):
-#             raise ValueError("Difficulty must be Easy, Medium or Hard.")
-#         if type(duration) is not int or duration <= 0:
-#             raise ValueError("Duration must be a positive number of minutes.")
-#         if type(min_players) is not int or type(max_players) is not int:
-#             raise ValueError("Player limits must be whole numbers.")
-#         if min_players < 1 or max_players < min_players:
-#             raise ValueError("Player limits must satisfy 1 <= minimum <= maximum.")
-#         if not isfinite(price_per_player) or price_per_player <= 0:
-#             raise ValueError("Price per player must be positive.")
-
-#         self.name = name
-#         self.difficulty = difficulty
-#         self.duration = duration
-#         self.min_players = min_players
-#         self.max_players = max_players
-#         self.price_per_player = price_per_player
-
-# אתה בעצם יכול לשלוח בקונסטרקטור לפני יצרית הinstance ולידציות שלא קשורות לקלט אלא ללוגיקה של הROOM
-    
