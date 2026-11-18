@@ -8,10 +8,8 @@ from classes.display import Display
 from classes.navigation import Navigation
 
 class EscapeRoomSystem:
-    @staticmethod
-    def __init__() -> None:
-        rooms = DataManager().load_rooms()
-        bookings = DataManager().load_bookings()
+    rooms = DataManager().load_rooms()
+    bookings = DataManager().load_bookings()
     data_manager = DataManager
     booking_manager = BookingManager
     report_manager = PricingManager
