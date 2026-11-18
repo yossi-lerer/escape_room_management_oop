@@ -19,7 +19,7 @@ class Room:
         pass
 
     def to_dict(self):
-        pass
+        return self.__dict__
 
     @classmethod
     def from_dict(cls, data):

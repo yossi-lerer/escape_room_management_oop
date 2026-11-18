@@ -4,7 +4,7 @@
         "name": "The Lab",
         "difficulty": "easy",
         "duration": 60,
-        "min_players": 2,
+        "min_players": "50",
         "max_players": 8,
         "price_per_player": 80,
         "is_active": false
@@ -87,6 +87,36 @@
         "min_players": 2,
         "max_players": 6,
         "price_per_player": 50,
+        "is_active": true
+    },
+    {
+        "room_id": "R010",
+        "name": "",
+        "difficulty": "2",
+        "duration": 2,
+        "min_players": 2,
+        "max_players": 2,
+        "price_per_player": 2,
+        "is_active": true
+    },
+    {
+        "room_id": "R011",
+        "name": "2",
+        "difficulty": "2",
+        "duration": 2,
+        "min_players": 2,
+        "max_players": 2,
+        "price_per_player": 2,
+        "is_active": true
+    },
+    {
+        "room_id": "R012",
+        "name": "2",
+        "difficulty": "2",
+        "duration": 500,
+        "min_players": 5,
+        "max_players": 500,
+        "price_per_player": 20,
         "is_active": true
     }
 ]
